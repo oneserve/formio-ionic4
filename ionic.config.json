@@ -1,7 +1,0 @@
-{
-  "name": "formio-ionic4",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
