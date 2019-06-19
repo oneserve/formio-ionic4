@@ -1,0 +1,103 @@
+{
+  "title": "My Test Form",
+  "components": [
+    {
+      "type": "textfield",
+      "input": true,
+      "tableView": true,
+      "inputType": "text",
+      "inputMask": "",
+      "label": "First Name",
+      "key": "firstName",
+      "placeholder": "Enter your first name",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "validate": {
+        "required": true,
+        "minLength": 2,
+        "maxLength": 10,
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false
+      },
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      }
+    },
+    {
+      "type": "textfield",
+      "input": true,
+      "tableView": true,
+      "inputType": "text",
+      "inputMask": "",
+      "label": "Last Name",
+      "key": "lastName",
+      "placeholder": "Enter your last name",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "validate": {
+        "required": true,
+        "minLength": 2,
+        "maxLength": 10,
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false
+      },
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      }
+    },
+    {
+      "inputMask": "99:99",
+      "label": "Time",
+      "properties": {},
+      "type": "time",
+      "logic": [],
+      "validate": {
+        "json": "",
+        "customMessage": ""
+      },
+      "reorder": false,
+      "alwaysEnabled": false,
+      "encrypted": false,
+      "tableView": true,
+      "input": true,
+      "customConditional": "",
+      "conditional": {
+        "json": "",
+        "when": "",
+        "show": ""
+      },
+      "defaultValue": "",
+      "key": "time2"
+    },
+    {
+      "input": true,
+      "label": "Submit",
+      "tableView": false,
+      "key": "submit",
+      "size": "md",
+      "leftIcon": "",
+      "rightIcon": "",
+      "block": false,
+      "action": "submit",
+      "disableOnInvalid": true,
+      "theme": "primary",
+      "type": "button"
+    }
+  ]
+}
