@@ -1,103 +1,480 @@
 {
-  "title": "My Test Form",
+  "_id": "5cd2b4959d6caa0b16e0f1dd",
+  "type": "form",
+  "tags": [
+    "common"
+  ],
+  "owner": "5cd2a7d3634e9640ca763c70",
   "components": [
     {
-      "type": "textfield",
-      "input": true,
-      "tableView": true,
-      "inputType": "text",
-      "inputMask": "",
-      "label": "First Name",
-      "key": "firstName",
-      "placeholder": "Enter your first name",
-      "prefix": "",
-      "suffix": "",
-      "multiple": false,
-      "defaultValue": "",
-      "protected": false,
-      "unique": false,
-      "persistent": true,
-      "validate": {
-        "required": true,
-        "minLength": 2,
-        "maxLength": 10,
-        "pattern": "",
-        "custom": "",
-        "customPrivate": false
-      },
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      }
-    },
-    {
-      "type": "textfield",
-      "input": true,
-      "tableView": true,
-      "inputType": "text",
-      "inputMask": "",
-      "label": "Last Name",
-      "key": "lastName",
-      "placeholder": "Enter your last name",
-      "prefix": "",
-      "suffix": "",
-      "multiple": false,
-      "defaultValue": "",
-      "protected": false,
-      "unique": false,
-      "persistent": true,
-      "validate": {
-        "required": true,
-        "minLength": 2,
-        "maxLength": 10,
-        "pattern": "",
-        "custom": "",
-        "customPrivate": false
-      },
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      }
-    },
-    {
-      "inputMask": "99:99",
-      "label": "Time",
+      "collapsible": false,
+      "theme": "primary",
+      "mask": false,
+      "label": "Panel",
       "properties": {},
-      "type": "time",
+      "type": "panel",
       "logic": [],
-      "validate": {
-        "json": "",
-        "customMessage": ""
-      },
       "reorder": false,
+      "collapsed": false,
       "alwaysEnabled": false,
-      "encrypted": false,
-      "tableView": true,
-      "input": true,
-      "customConditional": "",
+      "input": false,
+      "title": "Questions",
+      "tableView": false,
       "conditional": {
         "json": "",
         "when": "",
         "show": ""
       },
-      "defaultValue": "",
-      "key": "time2"
+      "customConditional": "",
+      "components": [
+        {
+          "optionsLabelPosition": "right",
+          "mask": false,
+          "label": "Do you have the materials, appropriate tools/equipment to complete the task safely?",
+          "properties": {},
+          "type": "radio",
+          "logic": [],
+          "reorder": false,
+          "validate": {
+            "json": "",
+            "customMessage": ""
+          },
+          "encrypted": false,
+          "alwaysEnabled": false,
+          "tableView": true,
+          "input": true,
+          "values": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "shortcut": ""
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "shortcut": ""
+            }
+          ],
+          "inline": false,
+          "conditional": {
+            "json": "",
+            "when": "",
+            "show": ""
+          },
+          "customConditional": "",
+          "defaultValue": "",
+          "key": "doYouHaveTheMaterialsAppropriateToolsEquipmentToCompleteTheTaskSafely"
+        },
+        {
+          "optionsLabelPosition": "right",
+          "mask": false,
+          "label": "Are you familiar with risk assessments/safe systems of work (including COSHH)?",
+          "properties": {},
+          "type": "radio",
+          "reorder": false,
+          "logic": [],
+          "validate": {
+            "json": "",
+            "required": true,
+            "customMessage": ""
+          },
+          "alwaysEnabled": false,
+          "encrypted": false,
+          "input": true,
+          "tableView": true,
+          "values": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "shortcut": ""
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "shortcut": ""
+            }
+          ],
+          "inline": false,
+          "conditional": {
+            "json": "",
+            "when": "",
+            "show": ""
+          },
+          "customConditional": "",
+          "attributes": {},
+          "defaultValue": "",
+          "key": "areYouFamiliarWithRiskAssessmentsSafeSystemsOfWorkIncludingCoshh"
+        },
+        {
+          "uploadUrl": "",
+          "spellcheck": true,
+          "wysiwyg": "",
+          "label": "Please enter any notes here",
+          "properties": {},
+          "type": "textarea",
+          "logic": [],
+          "reorder": false,
+          "validate": {
+            "json": "",
+            "customMessage": ""
+          },
+          "encrypted": false,
+          "alwaysEnabled": false,
+          "input": true,
+          "tableView": true,
+          "uploadDir": "",
+          "uploadOptions": "",
+          "customConditional": "",
+          "conditional": {
+            "json": "",
+            "when": "",
+            "show": ""
+          },
+          "inputFormat": "plain",
+          "showWordCount": false,
+          "defaultValue": "",
+          "showCharCount": false,
+          "isUploadEnabled": false,
+          "key": "pleaseEnterAnyNotesHere"
+        }
+      ],
+      "attributes": {},
+      "key": "panel2"
     },
     {
+      "dataGridLabel": false,
+      "mask": false,
+      "label": "Is there any existing damage to the work area?",
+      "properties": {},
+      "type": "checkbox",
+      "reorder": false,
+      "logic": [],
+      "validate": {
+        "json": "",
+        "customMessage": ""
+      },
+      "shortcut": "",
+      "alwaysEnabled": false,
+      "encrypted": false,
       "input": true,
-      "label": "Submit",
+      "tableView": true,
+      "conditional": {
+        "json": "",
+        "when": "",
+        "show": ""
+      },
+      "customConditional": "",
+      "defaultValue": false,
+      "key": "photosRequired"
+    },
+    {
+      "collapsible": false,
+      "theme": "warning",
+      "mask": false,
+      "label": "Panel",
+      "properties": {},
+      "type": "panel",
+      "reorder": false,
+      "logic": [],
+      "collapsed": false,
+      "alwaysEnabled": false,
       "tableView": false,
-      "key": "submit",
-      "size": "md",
-      "leftIcon": "",
-      "rightIcon": "",
-      "block": false,
-      "action": "submit",
-      "disableOnInvalid": true,
+      "input": false,
+      "title": "Existing Damage",
+      "conditional": {
+        "json": "",
+        "when": "photosRequired",
+        "show": "true",
+        "eq": "true"
+      },
+      "customConditional": "",
+      "components": [
+        {
+          "mask": false,
+          "type": "file",
+          "validate": {
+            "json": "",
+            "customMessage": ""
+          },
+          "dir": "",
+          "defaultValue": [],
+          "fileNameTemplate": "",
+          "key": "existingDamage",
+          "options": "",
+          "image": true,
+          "imageSize": "20",
+          "label": "Existing Damage Photo",
+          "properties": {},
+          "url": "",
+          "logic": [],
+          "reorder": false,
+          "alwaysEnabled": false,
+          "encrypted": false,
+          "tableView": true,
+          "input": true,
+          "webcam": true,
+          "fileTypes": [
+            {
+              "value": "",
+              "label": ""
+            }
+          ],
+          "conditional": {
+            "json": "",
+            "when": "",
+            "show": ""
+          },
+          "customConditional": "",
+          "attributes": {},
+          "storage": "base64",
+          "webcamSize": ""
+        },
+        {
+          "uploadUrl": "",
+          "spellcheck": true,
+          "autoExpand": false,
+          "label": "Existing Damage Details",
+          "properties": {},
+          "type": "textarea",
+          "logic": [],
+          "reorder": false,
+          "validate": {
+            "json": "",
+            "customMessage": ""
+          },
+          "encrypted": false,
+          "alwaysEnabled": false,
+          "input": true,
+          "tableView": true,
+          "uploadDir": "",
+          "uploadOptions": "",
+          "customConditional": "",
+          "conditional": {
+            "json": "",
+            "when": "",
+            "show": ""
+          },
+          "inputFormat": "plain",
+          "showWordCount": false,
+          "attributes": {},
+          "defaultValue": "",
+          "showCharCount": false,
+          "isUploadEnabled": false,
+          "key": "existingDamageDetails"
+        }
+      ],
+      "attributes": {},
+      "key": "panel3"
+    },
+    {
+      "label": "Upload No Table",
+      "mask": false,
+      "tableView": false,
+      "alwaysEnabled": false,
+      "type": "file",
+      "input": true,
+      "key": "uploadNoTable",
+      "defaultValue": [],
+      "validate": {
+        "customMessage": "",
+        "json": ""
+      },
+      "conditional": {
+        "show": "",
+        "when": "",
+        "json": ""
+      },
+      "image": true,
+      "storage": "base64",
+      "dir": "",
+      "fileNameTemplate": "",
+      "webcam": true,
+      "fileTypes": [
+        {
+          "label": "",
+          "value": ""
+        }
+      ],
+      "imageSize": "",
+      "webcamSize": "",
+      "reorder": false,
+      "url": "",
+      "options": "",
+      "encrypted": false,
+      "properties": {},
+      "customConditional": "",
+      "logic": [],
+      "attributes": {}
+    },
+    {
+      "label": "Upload Table",
+      "mask": false,
+      "tableView": true,
+      "alwaysEnabled": false,
+      "type": "file",
+      "input": true,
+      "key": "uploadTable",
+      "defaultValue": [],
+      "validate": {
+        "customMessage": "",
+        "json": ""
+      },
+      "conditional": {
+        "show": "",
+        "when": "",
+        "json": ""
+      },
+      "image": true,
+      "storage": "base64",
+      "dir": "",
+      "fileNameTemplate": "",
+      "webcam": true,
+      "fileTypes": [
+        {
+          "label": "",
+          "value": ""
+        }
+      ],
+      "imageSize": "",
+      "webcamSize": "",
+      "reorder": false,
+      "url": "",
+      "options": "",
+      "encrypted": false,
+      "properties": {},
+      "customConditional": "",
+      "logic": [],
+      "attributes": {}
+    },
+    {
+      "tags": [],
+      "mask": false,
+      "label": "Signature",
+      "properties": {},
+      "type": "signature",
+      "validate": {
+        "json": "",
+        "customMessage": ""
+      },
+      "logic": [],
+      "reorder": false,
+      "hideLabel": true,
+      "alwaysEnabled": false,
+      "encrypted": false,
+      "tableView": true,
+      "input": true,
+      "conditional": {
+        "json": "",
+        "show": ""
+      },
+      "customConditional": "",
+      "attributes": {},
+      "defaultValue": "",
+      "key": "engineerSignature"
+    },
+    {
+      "tags": [],
+      "tableView": false,
+      "input": true,
       "theme": "primary",
-      "type": "button"
+      "conditional": {
+        "show": ""
+      },
+      "label": "Submit",
+      "properties": {},
+      "type": "button",
+      "key": "submit"
     }
-  ]
+  ],
+  "revisions": "",
+  "_vid": 0,
+  "access": [
+    {
+      "roles": [],
+      "type": "create_own"
+    },
+    {
+      "roles": [],
+      "type": "create_all"
+    },
+    {
+      "roles": [],
+      "type": "read_own"
+    },
+    {
+      "roles": [
+        "5cadaf38a5ca44eb3d2266ed"
+      ],
+      "type": "read_all"
+    },
+    {
+      "roles": [],
+      "type": "update_own"
+    },
+    {
+      "roles": [
+        "5cadaf38a5ca44eb3d2266ed"
+      ],
+      "type": "update_all"
+    },
+    {
+      "roles": [],
+      "type": "delete_own"
+    },
+    {
+      "roles": [],
+      "type": "delete_all"
+    },
+    {
+      "roles": [],
+      "type": "team_read"
+    },
+    {
+      "roles": [],
+      "type": "team_write"
+    },
+    {
+      "roles": [],
+      "type": "team_admin"
+    }
+  ],
+  "title": "Risk Assessment Enhanced Survey",
+  "display": "form",
+  "name": "riskAssessmentEnhancedSurvey",
+  "path": "riskassessmentenhancedsurvey",
+  "project": "5cadaf38a5ca4421412266eb",
+  "submissionAccess": [
+    {
+      "roles": [
+        "5cadaf38a5ca44ed4d2266ec",
+        "5cadaf38a5ca44eb3d2266ed"
+      ],
+      "type": "create_own"
+    },
+    {
+      "roles": [
+        "5cadaf38a5ca44ed4d2266ec",
+        "5cadaf38a5ca44eb3d2266ed"
+      ],
+      "type": "read_own"
+    },
+    {
+      "roles": [
+        "5cadaf38a5ca44ed4d2266ec",
+        "5cadaf38a5ca44eb3d2266ed"
+      ],
+      "type": "update_own"
+    },
+    {
+      "roles": [
+        "5cadaf38a5ca44eb3d2266ed",
+        "5cadaf38a5ca44ed4d2266ec"
+      ],
+      "type": "delete_own"
+    }
+  ],
+  "created": "2019-05-08T10:51:01.004Z",
+  "modified": "2019-12-17T12:59:48.844Z",
+  "machineName": "tenanta:exampleriskassessment",
+  "properties": {}
 }
