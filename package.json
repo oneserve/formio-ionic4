@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "emulate:ios": "ionic cordova emulate ios -- --buildFlag='-UseModernBuildSystem=0'"
+    "emulate:ios": "ionic cordova emulate ios -- --buildFlag='-UseModernBuildSystem=0'",
+    "dev:build": "./scripts/dev-build.sh"
   },
   "private": true,
   "dependencies": {
@@ -29,7 +30,8 @@
     "angular-formio": "4.5.1",
     "bootstrap": "^4.4.1",
     "bootswatch": "^4.4.1",
-    "cordova-ios": "5.1.1",
+    "cordova-android": "^8.1.0",
+    "cordova-ios": "^5.1.1",
     "cordova-plugin-device": "^2.0.3",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.1.3",
@@ -75,10 +77,13 @@
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
+      "android",
       "ios"
     ]
   }
