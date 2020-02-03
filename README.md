@@ -8,12 +8,16 @@ install ionic cli globally
 # How run the project
 1. ```npm install```
 2. ```npm run dev:build```
-3. ```ionic cordova run ios```
+on ios
+```ionic cordova run ios```
+on android
+```ionic cordova run android```
 
 
 # Ionic info
 ```ionic info```
-Ionic:
+
+```Ionic:
 
   Node                          : node/v12.6.0
   Ionic CLI                     : 5.4.8
@@ -44,4 +48,4 @@ System:
    OS                : macOS Mojave
    Xcode             : Xcode 10.1 Build version 10B61
 
-
+```
