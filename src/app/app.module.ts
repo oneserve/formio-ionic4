@@ -9,6 +9,7 @@ import { FormioModule, FormioAppConfig } from 'angular-formio';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { OsFormioConfigService } from './services/os-formio-config.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,8 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: FormioAppConfig, useClass: OsFormioConfigService },
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
