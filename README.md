@@ -9,6 +9,8 @@ There are two different pre-made forms in this repo. One uses S3 images, the oth
 form.example s3.json => form with S3 file uploads
 form.example.json => form with base64 file uploads
 
+This forms will need slight tweaks to work with your setup e.g. machineName
+
 
 If you want to use S3 images, you will need to provide the correct information for the generation of the JWT:
 formioProjectId = 'your project id';
