@@ -22,7 +22,7 @@ export class HomePage {
   formioRoleId = 'formioRoleId';
   formioSecret = 'formioSecret';
   formId = 'formId';
-  url = 'https://formio-dev.oneserve.co.uk/mobiletest/files';
+  url = 'url';
 
   ngOnInit() {
     this.setupFormioOffline();
