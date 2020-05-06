@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { FormioModule } from 'angular-formio';
 import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
-import { FormioModule } from 'angular-formio';
 
 @NgModule({
   imports: [
@@ -22,4 +22,4 @@ import { FormioModule } from 'angular-formio';
   ],
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule { }

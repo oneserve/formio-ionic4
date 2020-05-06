@@ -7,5 +7,6 @@
 </ion-header>
 
 <ion-content padding>
-  <formio [form]="form"></formio>
+  <formio [form]="form" [url]="url" (submit)="onSubmit($event)">
+  </formio>
 </ion-content>

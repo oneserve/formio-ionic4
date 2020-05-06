@@ -1,0 +1,248 @@
+{
+  "_id": "5e997bb0df805c6499694b82",
+  "type": "form",
+  "tags": [],
+  "owner": "5e4ac1576480b925954750bc",
+  "components": [
+    {
+      "spellcheck": true,
+      "type": "textfield",
+      "key": "textField",
+      "placeholder": "Some text",
+      "label": "Text Field",
+      "input": true,
+      "tableView": true,
+      "calculateServer": false,
+      "autofocus": false,
+      "inputType": "text",
+      "inputMask": "",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "validate": {
+        "required": false,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false
+      },
+      "conditional": {
+        "show": null,
+        "when": null,
+        "eq": ""
+      }
+    },
+    {
+      "label": "S3 Display",
+      "tableView": false,
+      "storage": "s3",
+      "image": true,
+      "webcam": true,
+      "fileTypes": [
+        {
+          "value": "",
+          "label": ""
+        }
+      ],
+      "multiple": true,
+      "calculateServer": false,
+      "validate": {
+        "multiple": true
+      },
+      "key": "upload",
+      "type": "file",
+      "input": true,
+      "autofocus": false,
+      "imageSize": "200",
+      "placeholder": "",
+      "defaultValue": "",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "filePattern": "*",
+      "fileMinSize": "0KB",
+      "fileMaxSize": "1GB",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {}
+    },
+    {
+      "label": "S3 Do not display",
+      "tableView": false,
+      "storage": "s3",
+      "image": false,
+      "webcam": true,
+      "fileTypes": [
+        {
+          "value": "",
+          "label": ""
+        }
+      ],
+      "calculateServer": false,
+      "key": "upload1",
+      "type": "file",
+      "input": true,
+      "autofocus": false,
+      "imageSize": "200",
+      "placeholder": "",
+      "multiple": true,
+      "defaultValue": "",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "filePattern": "*",
+      "fileMinSize": "0KB",
+      "fileMaxSize": "1GB",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {}
+    },
+    {
+      "input": true,
+      "tableView": false,
+      "label": "Submit",
+      "type": "button",
+      "disableOnInvalid": true,
+      "key": "submit",
+      "autofocus": false,
+      "size": "md",
+      "leftIcon": "",
+      "rightIcon": "",
+      "block": false,
+      "action": "submit",
+      "theme": "primary"
+    }
+  ],
+  "revisions": "",
+  "_vid": 0,
+  "title": "files",
+  "name": "files",
+  "path": "files",
+  "display": "form",
+  "submissionAccess": [
+    {
+      "roles": [
+        "5e4ac2036480b93fba47515e"
+      ],
+      "type": "create_own"
+    },
+    {
+      "roles": [],
+      "type": "create_all"
+    },
+    {
+      "roles": [
+        "5e4ac2036480b93fba47515e",
+        "5e4ac2036480b9181847515f"
+      ],
+      "type": "read_own"
+    },
+    {
+      "roles": [
+        "5e4ac2036480b93fba47515e"
+      ],
+      "type": "read_all"
+    },
+    {
+      "roles": [],
+      "type": "update_own"
+    },
+    {
+      "roles": [],
+      "type": "update_all"
+    },
+    {
+      "roles": [],
+      "type": "delete_own"
+    },
+    {
+      "roles": [],
+      "type": "delete_all"
+    },
+    {
+      "roles": [],
+      "type": "team_read"
+    },
+    {
+      "roles": [],
+      "type": "team_write"
+    },
+    {
+      "roles": [],
+      "type": "team_admin"
+    }
+  ],
+  "project": "5e4ac2036480b9a21447515c",
+  "access": [
+    {
+      "roles": [],
+      "type": "create_own"
+    },
+    {
+      "roles": [],
+      "type": "create_all"
+    },
+    {
+      "roles": [],
+      "type": "read_own"
+    },
+    {
+      "roles": [
+        "5e4ac2036480b997ae47515d",
+        "5e4ac2036480b93fba47515e",
+        "5e4ac2036480b9181847515f"
+      ],
+      "type": "read_all"
+    },
+    {
+      "roles": [],
+      "type": "update_own"
+    },
+    {
+      "roles": [],
+      "type": "update_all"
+    },
+    {
+      "roles": [],
+      "type": "delete_own"
+    },
+    {
+      "roles": [],
+      "type": "delete_all"
+    },
+    {
+      "roles": [],
+      "type": "team_read"
+    },
+    {
+      "roles": [],
+      "type": "team_write"
+    },
+    {
+      "roles": [],
+      "type": "team_admin"
+    }
+  ],
+  "created": "2020-04-17T09:49:36.492Z",
+  "modified": "2020-04-30T09:42:14.332Z",
+  "machineName": "mobiletest:files"
+}
