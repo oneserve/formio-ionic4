@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import * as CryptoJS from 'crypto-js';
 import { Formio } from 'formiojs';
+import FormioOfflineProject from 'formiojs-plugin-offline/index.js';
 
 declare var require: any
 export type SubmissionData = {
@@ -20,10 +21,11 @@ export class HomePage {
   formioProjectId = 'formioProjectId';
   formioRoleId = 'formioRoleId';
   formioSecret = 'formioSecret';
-  formId = '5e997bb0df805c6499694b82';
+  formId = 'formId';
   url = 'https://formio-dev.oneserve.co.uk/mobiletest/files';
 
   ngOnInit() {
+    this.setupFormioOffline();
     this.setFormioToken();
     this.form = this.formioForm;
   }
@@ -68,6 +70,11 @@ export class HomePage {
     const token = OsUtil.createSignedJWT(tokenData, this.formioSecret);
     Formio.setToken(token);
   };
+
+  public setupFormioOffline() {
+    const formioOfflinePlugin = new FormioOfflineProject(this.url);
+    Formio.registerPlugin(formioOfflinePlugin, 'formio-offline');
+  }
 }
 
 
