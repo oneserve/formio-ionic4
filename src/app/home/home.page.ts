@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import * as CryptoJS from 'crypto-js';
 import { Formio } from 'formiojs';
 import FormioOfflineProject from 'formiojs-plugin-offline/index.js';
@@ -28,6 +28,11 @@ export class HomePage {
     this.setupFormioOffline();
     this.setFormioToken();
     this.form = this.formioForm;
+    this.listenToFormioEvents();
+  }
+
+  private listenToFormioEvents() {
+    Formio.events.on('offline.queue', (data) => console.log(`Something was queued - ${JSON.stringify(data)}`));
   }
 
   onSubmit(submissionData: SubmissionData | undefined) {
@@ -75,6 +80,7 @@ export class HomePage {
     const formioOfflinePlugin = new FormioOfflineProject(this.url);
     Formio.registerPlugin(formioOfflinePlugin, 'formio-offline');
   }
+
 }
 
 
