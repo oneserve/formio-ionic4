@@ -3,7 +3,6 @@ import * as FormioOfflineProject from 'formiojs-plugin-offline';
 import { Formio } from 'formiojs';
 import { Component } from '@angular/core';
 
-declare var require: any
 export type SubmissionData = {
   data: any;
 }
@@ -26,7 +25,6 @@ export class HomePage {
   ngOnInit() {
     this.setupFormioOffline();
     this.setFormioToken();
-    this.form = this.formioForm;
     this.listenToFormioEvents();
   }
 
@@ -40,12 +38,6 @@ export class HomePage {
       const submissionID = created._id;
       alert(submissionID);
     });
-  }
-
-  private get formioForm() {
-    const formioJSON = require('./form.example s3.json');
-    const deepCopy = JSON.parse(JSON.stringify(formioJSON));
-    return deepCopy;
   }
 
   formioJWTData() {
