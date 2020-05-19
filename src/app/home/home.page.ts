@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
 import * as CryptoJS from 'crypto-js';
+import * as FormioOfflineProject from 'formiojs-plugin-offline';
 import { Formio } from 'formiojs';
-import FormioOfflineProject from 'formiojs-plugin-offline/index.js';
+import { Component } from '@angular/core';
 
 declare var require: any
 export type SubmissionData = {
@@ -17,7 +17,6 @@ export type SubmissionData = {
 export class HomePage {
 
   form: any;
-
   formioProjectId = 'formioProjectId';
   formioRoleId = 'formioRoleId';
   formioSecret = 'formioSecret';
