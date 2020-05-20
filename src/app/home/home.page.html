@@ -3,9 +3,13 @@
     <ion-title>
       Ionic Formio Example
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCamera()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content padding>
   <formio [src]="url"></formio>
 </ion-content>

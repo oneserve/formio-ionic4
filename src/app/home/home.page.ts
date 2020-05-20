@@ -1,7 +1,10 @@
 import * as CryptoJS from 'crypto-js';
 import * as FormioOfflineProject from 'formiojs-plugin-offline';
-import { Formio } from 'formiojs';
+
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+
 import { Component } from '@angular/core';
+import { Formio } from 'formiojs';
 
 export type SubmissionData = {
   data: any;
@@ -21,6 +24,8 @@ export class HomePage {
   formioSecret = 'formioSecret';
   formId = 'formId';
   url = 'url';
+
+  constructor(private camera: Camera) { }
 
   ngOnInit() {
     this.setupFormioOffline();
@@ -70,6 +75,24 @@ export class HomePage {
   public setupFormioOffline() {
     const formioOfflinePlugin = new FormioOfflineProject(this.url);
     Formio.registerPlugin(formioOfflinePlugin, 'formio-offline');
+  }
+
+  public openCamera() {
+    this.camera.getPicture(this.cameraOptions).then((imageData) => {
+      let base64Image = 'data:image/jpeg;base64,' + imageData;
+     }, (err) => {
+       console.error(err);
+     });
+  }
+
+  get cameraOptions() {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      encodingType: this.camera.EncodingType.PNG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+    return options;
   }
 
 }
