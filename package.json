@@ -10,6 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "use-formio-fork": "./scripts/use-formio-fork.sh",
     "emulate:ios": "ionic cordova emulate ios -- --buildFlag='-UseModernBuildSystem=0'",
     "dev:build": "./scripts/dev-build.sh"
   },
@@ -46,7 +47,7 @@
     "core-js": "^3.6.4",
     "crypto-js": "3.3.0",
     "font-awesome": "^4.7.0",
-    "formiojs": "4.9.25",
+    "formiojs": "4.9.26",
     "formiojs-plugin-offline": "git+ssh://git@github.com/formio/formio-plugin-offline.git",
     "rxjs": "~6.5.4",
     "zone.js": "~0.10.2"
