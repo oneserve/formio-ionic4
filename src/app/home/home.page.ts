@@ -19,11 +19,11 @@ export type SubmissionData = {
 export class HomePage {
 
   form: any;
-  formioProjectId = 'formioProjectId';
-  formioRoleId = 'formioRoleId';
-  formioSecret = 'formioSecret';
-  formId = 'formId';
-  url = 'url';
+  formioProjectId = '';
+  formioRoleId = '';
+  formioSecret = '';
+  formId = '';
+  url = '';
 
   constructor(private camera: Camera) { }
 
@@ -35,6 +35,7 @@ export class HomePage {
 
   private listenToFormioEvents() {
     Formio.events.on('offline.queue', (data) => console.log(`Something was queued - ${JSON.stringify(data)}`));
+    Formio.events.on('offline.formSubmission', (data) => console.log(`SUBMITTED - ${JSON.stringify(data)}`));
   }
 
   onSubmit(submissionData: SubmissionData | undefined) {
@@ -77,12 +78,17 @@ export class HomePage {
     Formio.registerPlugin(formioOfflinePlugin, 'formio-offline');
   }
 
+  public restartQueue() {
+    const formioOfflinePlugin = Formio.getPlugin('formio-offline');
+    formioOfflinePlugin.dequeueSubmissions();
+  }
+
   public openCamera() {
     this.camera.getPicture(this.cameraOptions).then((imageData) => {
       let base64Image = 'data:image/jpeg;base64,' + imageData;
-     }, (err) => {
-       console.error(err);
-     });
+    }, (err) => {
+      console.error(err);
+    });
   }
 
   get cameraOptions() {
